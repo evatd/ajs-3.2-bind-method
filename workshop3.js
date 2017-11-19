@@ -1,16 +1,16 @@
 var test1,
-    test2,
-    obj, // As you note obj here, in this block, you can delete the VAR in var obj below, to avoid repetition
-    fullname = "John";
+  test2,
+  obj, // As you note obj here, in this block, you can delete the VAR in var obj below, to avoid repetition
+  fullname = "John";
 
 obj = {
-    fullname: "Jane",
-    prop: {
-        fullname: "Tom",
-        getName: function () {
-            return this.fullname;
-        }
+  fullname: "Jane",
+  prop: {
+    fullname: "Tom",
+    getName: function() {
+      return this.fullname;
     }
+  }
 };
 
 // Copy the function
@@ -25,12 +25,10 @@ console.log(test()); // "John", function runs in the global context
 // Task 1 - we want test to return "Tom"
 // +++++++++++++++++++++++++++++++++++++++++++++++
 
-
 // Make a copy of function, bound to "prop" object...
 // "this" in the function will be the "prop" object
 test1 = obj.prop.getName.bind(obj.prop); // "Tom", as module here is the specific obj.prop (with "Tom"), not obj (with "Jane")
 console.log(test1());
-
 
 // +++++++++++++++++++++++++++++++++++++++++++++++
 // Task 2 - we want test to return "Jane"
