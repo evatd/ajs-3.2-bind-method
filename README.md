@@ -1,5 +1,9 @@
 # ajs-3.2-bind-method
-Advanced JavaScript | Workshop 3 Task 2
+**Advanced JavaScript | Workshop 3 Task 2**
+
+Solution to the following task:
+
+### Task
 
 Download the workshop3.zip file from Moodle and extract it to your workspace. In workshop3.js, use bind() to amend the code from the Question 2a so that:
 
